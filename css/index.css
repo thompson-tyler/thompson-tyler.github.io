@@ -1,0 +1,73 @@
+
+p {
+    font-size: 15pt;
+}
+
+.explore-banner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    background-color: #e7b351;
+    border: none;
+    font-size: 50px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.explore-banner div {
+    transition: all 0.2s;
+}
+
+.explore-banner div::after {
+    content: "";
+	display: block;
+	width: 0px;
+	border-bottom: 3px solid white;
+    transition: all .5s;
+    border-radius: 1px;
+}
+
+.explore-banner:hover {
+    background-color: #ecbd64;
+}
+
+.explore-banner:hover div::after {
+    width: 100%;
+}
+
+.profile {
+    height: 80vh;
+    position: relative;
+}
+
+.profile .profile-title {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 120pt;
+    text-align: right;
+    font-weight: bold;
+    width: 50%;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.profile-img {
+    position: absolute;
+    
+    background-image: url('../content/tyler_candid.jpg');
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+
+    width: 70vw;
+    height: 80vh;
+    top: 0;
+    right: 0;
+    
+    z-index: -1;
+    border-bottom-left-radius: 100px;
+}

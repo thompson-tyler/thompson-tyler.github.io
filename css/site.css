@@ -1,0 +1,94 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    margin: 0;
+    background-color: #242226;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #242226;
+    box-shadow: 0 0 8px black;
+    z-index: 2;
+    padding: 10px;
+}
+
+.navbar a {
+    color: inherit;
+    text-decoration: inherit;
+}
+.navbar .title {
+    font-size: 40pt;
+    padding-left: 40px;
+}
+
+.name-container {
+    display: flex;
+}
+
+.name-shrink {
+    white-space: nowrap;
+    overflow: hidden;
+
+    max-width: 0;
+    transition: max-width 1s;
+}
+
+.line-container:hover .name-shrink {
+    max-width: 100%;
+}
+
+.line-container::after {
+	content: "";
+	display: block;
+    border-radius: 1px;
+	border-bottom: 3px solid #e7b351;
+
+    position: relative;
+    left: 3px;
+	width: 58px;
+
+    transition: width 1s;
+}
+
+.line-container:hover::after {
+    width: 100%;
+}
+
+.navbar-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-item {
+    color: inherit;
+    text-decoration: inherit;
+    font-size: 20pt;
+    margin-right: 40px;
+}
+
+.nav-item::after {
+	content: "";
+	display: block;
+	width: 0px;
+	border-bottom: 2px solid #e7b351;
+    transition: all .5s;
+    border-radius: 1px;
+}
+
+.nav-item:hover::after {
+	width: 100%;
+}
+
+.article-content {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
