@@ -1,6 +1,111 @@
 p {
     font-size: 20px;
-    padding: 15px;
-    margin-left: 15vw;
-    margin-right: 15vw;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.project-title-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.project-title-container div {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 120pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.project-title-container div::after {
+    content: "";
+    display: block;
+    height: 0;
+    border-radius: 1px;
+    border-bottom: 4px solid #e7b351;
+    width: 100%;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.heading div {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.heading div::before,
+.heading div::after {
+    content: "";
+    display: block;
+    height: 0;
+    border-radius: 1px;
+    border-bottom: 3px solid #3D3A41;
+    width: 100%;
+}
+
+.snip-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    height: 300px;
+}
+
+.snip-container .cell {
+    flex: 1;
+    display: flex;
+    margin: 10px;
+    
+    justify-content: center;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.snip-container .cell:hover {
+    flex: 2;
+    margin: -20px;
+    z-index: 2;
+}
+
+.snip-container img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.logo-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.logo-container img {
+    max-height: 100px;
+    border-radius: 10px;
+}
+
+.project-link {
+    color: white;
+    text-decoration: inherit;
+    font-size: 25pt;
+}
+
+.project-link:hover {
+    color: #A4A0A7;
+    /* font-weight: bold; */
 }
