@@ -69,10 +69,17 @@ body {
 }
 
 .nav-item {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
     color: inherit;
     text-decoration: inherit;
-    font-size: 20pt;
+    font-size: 18pt;
     margin-right: 40px;
+    transition: color .2s;
+}
+
+.nav-item:hover {
+    color: rgb(190, 190, 200);
 }
 
 .nav-item::after {
@@ -89,9 +96,8 @@ body {
 }
 
 .article-content {
-    padding-left: 10vw;
-    padding-right: 10vw;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 20px;
     position: relative;
 }

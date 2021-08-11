@@ -6,13 +6,13 @@ p {
 
 .project-title-container {
     display: flex;
+    font-size: 120pt;
     justify-content: center;
     margin-bottom: 100px;
 }
 
 .project-title-container div {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 120pt;
     font-weight: bold;
     text-align: center;
 }
@@ -29,13 +29,13 @@ p {
 .heading {
     display: flex;
     justify-content: center;
+    font-size: 40pt;
     margin-top: 100px;
     margin-bottom: 100px;
 }
 
 .heading div {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 40pt;
     font-weight: bold;
     text-align: center;
 }
@@ -59,6 +59,7 @@ p {
     margin-bottom: 50px;
 
     height: 300px;
+    width: 100%;
 }
 
 .snip-container .cell {
@@ -68,7 +69,7 @@ p {
     
     justify-content: center;
     box-shadow: 0 0 10px black;
-    border-radius: 10px;
+    border-radius: 8px;
     
     transition: all 0.5s;
     z-index: 1;
@@ -83,7 +84,7 @@ p {
 .snip-container img {
     object-fit: cover;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .logo-container {
@@ -96,16 +97,84 @@ p {
 
 .logo-container img {
     max-height: 100px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .project-link {
     color: white;
     text-decoration: inherit;
     font-size: 25pt;
+    transition: color .2s;
 }
 
 .project-link:hover {
-    color: #A4A0A7;
-    /* font-weight: bold; */
+    color: rgb(190, 190, 200);
+}
+
+.project-link::before {
+    content: "🐶 ";
+}
+
+@media only screen and (max-width: 414px) {
+    p {
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .project-title-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 20vw;
+    }
+
+    .heading {
+        font-size: 10vw;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .snip-container {
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        margin: 0;
+        height: unset;
+    }
+
+    .snip-container .cell {
+        height: 100px;
+        width: 100%;
+        flex: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        box-shadow: unset;
+    }
+
+    .project-link::before {
+        content: "";
+    }
+
+    .project-link {
+        text-decoration: underline;
+        font-size: 16px;
+        word-wrap: break-word;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        height: 200px;
+    }
+
+    .logo-container img {
+        max-width: 33%;
+        max-height: unset;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }

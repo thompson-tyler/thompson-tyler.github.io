@@ -41,6 +41,7 @@ p {
 .profile {
     height: 80vh;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .profile .profile-title {
