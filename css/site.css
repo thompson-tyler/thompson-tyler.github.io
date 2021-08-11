@@ -84,12 +84,15 @@ a {
     font-weight: bold;
     color: inherit;
     text-decoration: inherit;
-    font-size: 18pt;
+    font-size: 24px;
+}
+
+.navbar .nav-item {
     margin-right: 40px;
 }
 
-.nav-item::after {
-	content: "";
+.navbar .nav-item::after {
+    content: "";
 	display: block;
 	width: 0px;
 	border-bottom: 2px solid #e7b351;
@@ -97,14 +100,71 @@ a {
     border-radius: 1px;
 }
 
-.nav-item:hover::after {
-	width: 100%;
+.navbar .nav-item:hover::after {
+    width: 100%;
 }
-
 
 .article-content {
     margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 20px;
     position: relative;
+}
+
+.waffle {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    margin: 15px 15px;
+    width: 44px;
+}
+
+.navmenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    overflow: hidden;
+    
+    background-color: #242226;
+    transition: .5s;
+    box-shadow: -10vw 0 20vw black;
+}
+
+.navmenu-items {
+    display: grid;
+    gap: 20px;
+    align-content: start;
+    grid-template-columns: auto;
+    
+    margin: 20px;
+}
+
+.close-navmenu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    
+    font-size: 32px;
+    text-align: center;
+    width: 44px;
+}
+
+/* Change nav type for mobile/desktop */
+@media (pointer: coarse) {
+    .navbar-right {
+        display: none;
+    }
+}
+
+@media (pointer: fine) {
+    .waffle {
+        display: none;
+    }
+
+    .navmenu {
+        display: none;
+    }
 }

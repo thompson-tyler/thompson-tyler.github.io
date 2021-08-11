@@ -8,9 +8,20 @@
     <link rel="icon" type="image/png" href="content/favicon32.png">
     <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/navmenu.js"></script>
 </head>
 
 <body>
+    <div class="navmenu" id="navmenu">
+        <div class="close-navmenu" onclick="closeNavMenu()">&#x2716;</div>
+        <div class="navmenu-items">
+            <a class="nav-item" href="index.html">HOME</a>
+            <a class="nav-item" href="about.html">ABOUT</a>
+            <a class="nav-item" href="nav.html">PROJECTS</a>
+            <a class="nav-item" href="contact.html">CONTACT</a>
+            <a class="nav-item">OTHER</a>
+        </div>
+    </div>
     <div class="navbar">
         <div class="title">
             <div class="line-container">
@@ -29,6 +40,7 @@
             <a class="nav-item" href="contact.html">CONTACT</a>
             <a class="nav-item">OTHER</a>
         </div>
+        <div class="waffle" id="waffle" onclick="openNavMenu()">&#9776;</div>
     </div>
     
     <div class="profile">
