@@ -1,86 +1,14 @@
-/* For mobile */
 p {
     font-size: 16px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 40px 0;
 }
 
 .project-title-container {
     display: flex;
     justify-content: center;
 
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     font-size: 20vw;
-}
-
-.heading {
-    display: flex;
-    justify-content: center;
-
-    font-size: 10vw;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    text-align: center;
-}
-
-.heading div::before,
-.heading div::after {
-    content: "";
-    display: block;
-    height: 0;
-    border-radius: 1px;
-    border-bottom: 3px solid #3D3A41;
-    width: 100%;
-}
-
-.snip-container {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.snip-container .cell {
-    flex: 1;
-    width: 100%;
-
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.project-link-container {
-    width: 100%;
-    text-align: center;
-}
-
-.project-link {
-    color: white;
-    text-decoration: underline;
-    text-align: center;
-    font-size: 16px;
-    word-wrap: break-word;
-}
-
-.logo-container {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    height: 200px;
-}
-
-.logo-container img {
-    max-width: 33%;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .project-title-container div {
@@ -98,67 +26,139 @@ p {
     width: 100%;
 }
 
+.heading {
+    display: flex;
+    justify-content: center;
+
+    font-size: 10vw;
+    margin: 40px 0;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.heading div::before,
+.heading div::after {
+    content: "";
+    display: block;
+    height: 0;
+    border-radius: 1px;
+    border-bottom: 3px solid #3D3A41;
+    width: 100%;
+}
+
+/* Gallery */
+
+.snip-container {
+    display: grid;
+    width: 100%;
+
+    /* Mobile */
+    grid-template-columns: auto;
+    gap: 16px 16px;
+    
+    margin: 40px 0;
+}
+
+.snip-container .cell {
+    width: 100%;
+    border-radius: 8px;
+
+    transition: all .2s;
+}
+
+/* Landscape mobile and portrait tablet */
+@media only screen and (min-width: 600px) {
+    .snip-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+/* Landscape tablet and small desktop */
+@media only screen and (min-width: 900px) {
+    .snip-container {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+    .snip-container {
+        grid-template-columns: auto auto auto auto;
+    }
+
+}
+
+@media only screen and (pointer: fine) {
+    .snip-container .cell:hover {
+        transform: scale(105%);
+        z-index: 2;
+    }
+}
+
 .snip-container img {
     width: 100%;
+    border-radius: inherit;
+}
+
+.project-link-container {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.project-link {
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 24px;
+    word-wrap: break-word;
+}
+
+.logo-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    width: 100%;
+
+    margin: 40px 0;
+}
+
+.logo-container img {
+    max-height: 15vh;
+    max-width: 100%;
+    margin: 10px;
     border-radius: 8px;
 }
 
-/* For > mobile */
-@media only screen and (min-width: 415px) {
+/* For desktop */
+@media only screen and (min-width: 900px) {
     p {
         font-size: 20px;
-        margin-top: 100px;
-        margin-bottom: 100px;
+        margin: 100px 0;
     }
     
     .project-title-container {
-        font-size: 120pt;
-        margin-bottom: 100px;
+        font-size: 120px;
+        margin: 100px 0;
     }
     
     .heading {
-        font-size: 40pt;
-        margin-top: 100px;
-        margin-bottom: 100px;
+        font-size: 60px;
+        margin: 100px 0;
     }
-    
-    .snip-container {
-        justify-content: flex-start;
-        align-items: center;
-        
-        margin-top: 30px;
-        margin-bottom: 30px;
-        
-        height: 700px;
-        width: 100%;
-    }
-    
-    .snip-container .cell {
-        flex: 0;
-        max-width: 33%;
-        margin: 10px;
-        
-        box-shadow: 0 0 10px black;
-        border-radius: 8px;
-        
-        transition: all 0.5s;
-        z-index: 1;
+
+    .project-link-container {
+        margin: 100px 0;
     }
 
     .project-link {
-        font-size: 25pt;
+        font-size: 40px;
     }
     
     .logo-container {
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-
-    .logo-container img {
-        max-width: unset;
-        height: 100px;
-        border-radius: 8px;
+        margin: 100px 0;
     }
 }

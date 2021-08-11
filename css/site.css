@@ -10,11 +10,16 @@ body {
 a {
     color: inherit;
     text-decoration: inherit;
-    transition: color .2s;
 }
 
-a:hover {
-    color: rgb(190, 190, 200);
+@media only screen and (pointer: fine) {
+    a {
+        transition: color .2s;
+    }
+
+    a:hover {
+        color: rgb(190, 190, 200);
+    }
 }
 
 .navbar {
@@ -70,7 +75,7 @@ a:hover {
 .navbar-right {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
 }
 
