@@ -43,33 +43,43 @@ a {
     display: flex;
 }
 
-.name-shrink {
-    white-space: nowrap;
-    overflow: hidden;
-
-    max-width: 0;
-    transition: max-width 1s;
-}
-
-.line-container:hover .name-shrink {
-    max-width: 100%;
-}
-
 .line-container::after {
-	content: "";
+    content: "";
 	display: block;
     border-radius: 1px;
 	border-bottom: 3px solid #e7b351;
-
+    
     position: relative;
     left: 3px;
 	width: 58px;
-
+    
     transition: width 1s;
 }
 
-.line-container:hover::after {
-    width: 100%;
+/* Expanding logo hidden unless on desktop */
+.name-shrink {
+    display: none;
+}
+
+/* Navbar animations for desktop */
+@media (pointer: fine) {
+    .name-shrink {
+        display: unset;
+
+        white-space: nowrap;
+        overflow: hidden;
+    
+        max-width: 0;
+        transition: max-width 1s;
+    }
+
+    .line-container:hover .name-shrink {
+        max-width: 100%;
+    }
+    
+    .line-container:hover::after, .navbar .nav-item:hover::after {
+        width: 100%;
+    }
 }
 
 .navbar-right {
@@ -100,10 +110,6 @@ a {
     border-radius: 1px;
 }
 
-.navbar .nav-item:hover::after {
-    width: 100%;
-}
-
 .article-content {
     margin-left: 10vw;
     margin-right: 10vw;
@@ -115,7 +121,7 @@ a {
     color: white;
     font-size: 32px;
     text-align: center;
-    margin: 15px 15px;
+    margin: 15px;
     width: 44px;
 }
 
