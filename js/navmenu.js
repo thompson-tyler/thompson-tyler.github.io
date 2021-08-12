@@ -1,8 +1,8 @@
 function openNavMenu() {
-    var navMenu = document.getElementById("navmenu");
-    navMenu.style.width = "85vw";
+    document.getElementById("close-navmenu-region").style.display = "unset";
+    document.getElementById("navmenu").style.width = "85vw";
 }
 function closeNavMenu() {
-    var navMenu = document.getElementById("navmenu");
-    navMenu.style.width = "0";
+    document.getElementById("close-navmenu-region").style.display = "none";
+    document.getElementById("navmenu").style.width = "0";
 }
