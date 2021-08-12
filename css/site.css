@@ -121,7 +121,7 @@ a {
     color: white;
     font-size: 32px;
     text-align: center;
-    margin: 15px;
+    padding: 15px;
     width: 44px;
 }
 
@@ -150,8 +150,9 @@ a {
 
 .close-navmenu-button {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 0;
+    right: 0;
+    padding: 20px;
     
     font-size: 32px;
     text-align: center;
