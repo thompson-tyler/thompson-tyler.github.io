@@ -68,26 +68,18 @@ p {
     transition: all .2s;
 }
 
-/* Landscape mobile and portrait tablet */
+/* Tablet */
 @media only screen and (min-width: 600px) {
     .snip-container {
         grid-template-columns: auto auto;
     }
 }
 
-/* Landscape tablet and small desktop */
+/* Desktop */
 @media only screen and (min-width: 900px) {
     .snip-container {
         grid-template-columns: auto auto auto;
     }
-}
-
-/* Desktop */
-@media only screen and (min-width: 1200px) {
-    .snip-container {
-        grid-template-columns: auto auto auto auto;
-    }
-
 }
 
 @media only screen and (pointer: fine) {
