@@ -117,7 +117,7 @@ a {
     position: relative;
 }
 
-.waffle {
+.hamburger {
     color: white;
     font-size: 32px;
     text-align: center;
@@ -145,7 +145,7 @@ a {
     align-content: start;
     grid-template-columns: auto;
     
-    margin: 20px;
+    margin: 40px;
 }
 
 .close-navmenu-button {
@@ -176,7 +176,7 @@ a {
 }
 
 @media (pointer: fine) {
-    .waffle {
+    .hamburger {
         display: none;
     }
     
