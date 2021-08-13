@@ -12,13 +12,13 @@ a {
     text-decoration: inherit;
 }
 
-@media only screen and (pointer: fine) {
+@media (pointer: fine) {
     a {
         transition: color .2s;
     }
 
     a:hover {
-        color: rgb(190, 190, 200);
+        color: #bebec8;
     }
 }
 
@@ -61,31 +61,10 @@ a {
     display: none;
 }
 
-/* Navbar animations for desktop */
-@media (pointer: fine) {
-    .name-shrink {
-        display: unset;
-
-        white-space: nowrap;
-        overflow: hidden;
-    
-        max-width: 0;
-        transition: max-width 1s;
-    }
-
-    .line-container:hover .name-shrink {
-        max-width: 100%;
-    }
-    
-    .line-container:hover::after, .navbar .nav-item:hover::after {
-        width: 100%;
-    }
-}
-
 .navbar-right {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -101,13 +80,40 @@ a {
     margin-right: 40px;
 }
 
-.navbar .nav-item::after {
+.nav-item::after {
     content: "";
 	display: block;
 	width: 0px;
 	border-bottom: 2px solid #e7b351;
     transition: all .5s;
     border-radius: 1px;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+/* Navbar animations for desktop */
+@media
+only screen and (pointer: fine) and (min-width: 1225px),
+only screen and (pointer: fine) and (max-width: 900px) and (min-width: 575px) {
+    .name-shrink {
+        display: unset;
+        
+        white-space: nowrap;
+        overflow: hidden;
+        
+        max-width: 0;
+        transition: max-width 1s;
+    }
+    
+    .line-container:hover .name-shrink {
+        max-width: 100%;
+    }
+    
+    .line-container:hover::after {
+        width: 100%;
+    }
 }
 
 .article-content {
@@ -123,11 +129,13 @@ a {
     text-align: center;
     padding: 15px;
     width: 44px;
+    cursor: pointer;
 }
 
 .navmenu {
     height: 100%;
     width: 0;
+    max-width: 425px;
     position: fixed;
     top: 0;
     right: 0;
@@ -157,6 +165,20 @@ a {
     font-size: 32px;
     text-align: center;
     width: 44px;
+    cursor: pointer;
+}
+
+@media (pointer: fine) {
+    .hamburger, .close-navmenu-button {
+        transition: color .1s;
+    }
+    .hamburger:hover, .close-navmenu-button:hover {
+        color: #bebec8;
+    }
+}
+
+.navmenu .nav-item {
+    justify-self: start;
 }
 
 .close-navmenu-region {
@@ -167,16 +189,19 @@ a {
     height: 100%;
     z-index: 4;
     display: none;
+    cursor: pointer;
 }
 
 /* Change nav type for mobile/desktop */
-@media (pointer: coarse) {
+/* Mobile OR small desktop */
+@media (pointer: coarse), (max-width: 900px) {
     .navbar-right {
         display: none;
     }
 }
 
-@media (pointer: fine) {
+/* Desktop */
+@media (pointer: fine) and (min-width: 900px) {
     .hamburger {
         display: none;
     }
