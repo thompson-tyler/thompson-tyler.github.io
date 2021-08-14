@@ -1,50 +1,95 @@
-.row {
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
+
+.project-grid {
+    display: grid;
+    grid-template-columns: auto;
+    
+    gap: 24px;
+    margin: 24px;
 }
 
-.col {
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
-
-    cursor: pointer;
-
-    flex: 1;
+.project-grid .cell {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 
-    transform: scale(1.02);
-    filter: blur(4px);
-
-    transition: all .5s;
-
-    z-index: 0;
-}
-
-.col:hover {
-    flex: 2.5;
-    filter: blur(0);
-
-    box-shadow: 0 0 30px black;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
     
-    z-index: 1;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+    overflow: hidden;
 }
 
-.ugla-title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 50pt;
+.project-grid .cell > div {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    
+    border-radius: inherit;
+    background-color: #242226b2;
+    color: black;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .4);
+}
+
+.project-grid .cell > div > div {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     text-align: center;
-    text-shadow: -2px 2px 10px black;
+    
+    padding: 12px;
+    transition: .2s;
 }
 
-.ugla-subtitle {
-    font-weight: normal;
-    font-size: 20px;
-    font-style: italic;
+@media only screen and (pointer: fine) {
+    .project-grid .cell:hover > div > div{
+        padding-bottom: 20px;
+    }
+}
+
+.project-grid .cell .title {
+    font-weight: bold;
+    font-size: 24px;
+    
+    padding-bottom: 4px;
+}
+
+.project-grid .cell .caption {
+    font-size: 14px;
+}
+
+.project-grid .ugla {
+    background-image: url("../content/UGLA_snip.png");
+}
+.project-grid .animal-aid {
+    background-image: url("../content/AnimalAid/home.png");
+}
+.project-grid .default {
+    background-image: url("../content/nature.jpg");
+}
+
+@media only screen and (min-width: 500px) {
+    .project-grid {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .project-grid {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .project-grid {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    .project-grid {
+        grid-template-columns: auto auto auto auto auto;
+    }
 }
