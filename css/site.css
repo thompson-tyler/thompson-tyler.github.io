@@ -12,7 +12,7 @@ a {
     text-decoration: inherit;
 }
 
-@media (pointer: fine) {
+@media only screen and (pointer: fine) {
     a {
         transition: color .2s;
     }
@@ -80,17 +80,19 @@ a {
     margin-right: 40px;
 }
 
-.nav-item::after {
-    content: "";
-	display: block;
-	width: 0px;
-	border-bottom: 2px solid #e7b351;
-    transition: all .5s;
-    border-radius: 1px;
-}
+@media only screen and (pointer: fine) {
+    .nav-item::after {
+        content: "";
+        display: block;
+        width: 0px;
+        border-bottom: 2px solid #e7b351;
+        transition: all .5s;
+        border-radius: 1px;
+    }
 
-.nav-item:hover::after {
-    width: 100%;
+    .nav-item:hover::after {
+        width: 100%;
+    }
 }
 
 /* Navbar animations for desktop */
