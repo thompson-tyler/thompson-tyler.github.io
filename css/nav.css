@@ -60,11 +60,20 @@
     font-size: 14px;
 }
 
-.project-grid .ugla {
-    background-image: url("../content/UGLA_snip.png");
-}
 .project-grid .animal-aid {
     background-image: url("../content/AnimalAid/home.png");
+}
+.project-grid .ugla {
+    background-image: url("../content/UGLA/UGLA_snip.png");
+}
+.project-grid .swarm {
+    background-image: url("../content/Swarm/TOREPLACE.webp");
+}
+.project-grid .acton {
+    background-image: url("../content/Acton/logo.jpg");
+}
+.project-grid .printing-classes {
+    background-image: url("../content/3DClasses/Flier.png");
 }
 .project-grid .default {
     background-image: url("../content/nature.jpg");
