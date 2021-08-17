@@ -105,7 +105,7 @@ a {
 
 /* Navbar animations for desktop */
 @media
-only screen and (pointer: fine) and (min-width: 1225px),
+only screen and (pointer: fine) and (min-width: 1250px),
 only screen and (pointer: fine) and (max-width: 900px) and (min-width: 575px) {
     .name-shrink {
         display: unset;
