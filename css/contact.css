@@ -1,0 +1,57 @@
+.contact-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: auto;
+    margin:auto;
+    max-width: 800px;
+}
+
+.contact-grid .cell {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 8px;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 8px;
+    background-color: #242226;
+    outline: rgb(180, 180, 180) solid 2px;
+    text-align: center;
+}
+
+@media only screen and (pointer: fine) {
+    .contact-grid .cell {
+        transition: background-color .2s;
+    }
+
+    .contact-grid .cell:hover {
+        background-color: #3D3A41;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-grid .cell {
+        justify-self: center;
+        width: 250px;
+    }
+}
+
+.contact-grid .cell .icon {
+    font-size: 38px;
+}
+
+.contact-grid .cell .info {
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.extra-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 24px auto;
+    max-width: 800px;
+}
