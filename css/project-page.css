@@ -30,7 +30,7 @@ p {
 .heading {
     display: flex;
     justify-content: center;
-    font-size: 10vw;
+    font-size: 8vw;
     margin: 40px 0;
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
