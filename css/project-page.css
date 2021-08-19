@@ -82,12 +82,13 @@ p {
     }
 }
 
-@media only screen and (pointer: fine) {
+/* Expand gallery images on hover */
+/* @media only screen and (pointer: fine) {
     .snip-container .cell:hover {
-        transform: scale(105%);
+        transform: scale(110%);
         z-index: 2;
     }
-}
+} */
 
 .snip-container img {
     width: 100%;
