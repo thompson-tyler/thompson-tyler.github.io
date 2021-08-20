@@ -1,8 +1,13 @@
+:root {
+    --main-bg-color: #242226;
+    --main-accent: #e7b351;
+}
+
 body {
     font-family: 'Courier New', Courier, monospace;
     color: white;
     margin: 0;
-    background-color: #242226;
+    background-color: var(--main-bg-color);
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -28,7 +33,7 @@ a {
     justify-content: space-between;
     position: sticky;
     top: 0;
-    background-color: #242226;
+    background-color: var(--main-bg-color);
     box-shadow: 0 0 8px black;
     z-index: 3;
     padding: 10px;
@@ -55,7 +60,7 @@ a {
     content: "";
 	display: block;
     border-radius: 1px;
-	border-bottom: 3px solid #e7b351;
+	border-bottom: 3px solid var(--main-accent);
     
     position: relative;
     left: 3px;
@@ -93,7 +98,7 @@ a {
         content: "";
         display: block;
         width: 0px;
-        border-bottom: 2px solid #e7b351;
+        border-bottom: 2px solid var(--main-accent);
         transition: all .5s;
         border-radius: 1px;
     }
@@ -152,7 +157,7 @@ only screen and (pointer: fine) and (max-width: 900px) and (min-width: 575px) {
     z-index: 4;
     overflow: hidden;
     
-    background-color: #242226;
+    background-color: var(--main-bg-color);
     transition: width .4s ease-out;
     box-shadow: -10vw 0 20vw black;
 }

@@ -13,7 +13,7 @@
     padding: 16px;
     margin: 16px;
     border-radius: 8px;
-    background-color: #242226;
+    background-color: var(--main-bg-color);
     border: rgb(180, 180, 180) solid 2px;
     text-align: center;
 }
