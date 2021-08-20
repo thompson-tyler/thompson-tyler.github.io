@@ -14,7 +14,7 @@
     margin: 16px;
     border-radius: 8px;
     background-color: #242226;
-    outline: rgb(180, 180, 180) solid 2px;
+    border: rgb(180, 180, 180) solid 2px;
     text-align: center;
 }
 
