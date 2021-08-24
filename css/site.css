@@ -1,0 +1,227 @@
+:root {
+    --main-bg-color: #242226;
+    --main-accent: #e7b351;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    margin: 0;
+    background-color: var(--main-bg-color);
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+@media only screen and (pointer: fine) {
+    a {
+        transition: color .2s;
+    }
+
+    a:hover {
+        color: #bebec8;
+    }
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: var(--main-bg-color);
+    box-shadow: 0 0 8px black;
+    z-index: 3;
+    padding: 10px;
+    transition: top .5s;
+}
+
+@media only screen and (pointer: coarse) {
+    body::after {
+        content: 'mobile';
+        display: none;
+    }
+}
+
+.navbar .title {
+    font-size: 40pt;
+    margin-left: 15px;
+}
+
+.name-container {
+    display: flex;
+}
+
+.line-container::after {
+    content: "";
+	display: block;
+    border-radius: 1px;
+	border-bottom: 3px solid var(--main-accent);
+    
+    position: relative;
+    left: 3px;
+	width: 58px;
+    
+    transition: width .75s;
+}
+
+/* Expanding logo hidden unless on desktop */
+.name-shrink {
+    display: none;
+}
+
+.navbar-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: inherit;
+    text-decoration: inherit;
+    font-size: 24px;
+}
+
+.navbar .nav-item {
+    margin-right: 40px;
+}
+
+@media only screen and (pointer: fine) {
+    .nav-item::after {
+        content: "";
+        display: block;
+        width: 0px;
+        border-bottom: 2px solid var(--main-accent);
+        transition: all .5s;
+        border-radius: 1px;
+    }
+
+    .nav-item:hover::after {
+        width: 100%;
+    }
+}
+
+/* Navbar animations for desktop */
+@media
+only screen and (pointer: fine) and (min-width: 1250px),
+only screen and (pointer: fine) and (max-width: 900px) and (min-width: 575px) {
+    .name-shrink {
+        display: unset;
+        
+        white-space: nowrap;
+        overflow: hidden;
+        
+        max-width: 0;
+        transition: max-width .75s;
+    }
+    
+    .line-container:hover .name-shrink {
+        max-width: 100%;
+    }
+    
+    .line-container:hover::after {
+        width: 100%;
+    }
+}
+
+.article-content {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 20px;
+    position: relative;
+}
+
+.hamburger {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    padding: 15px;
+    width: 44px;
+    cursor: pointer;
+}
+
+.navmenu {
+    height: 100%;
+    width: 0;
+    max-width: 425px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    overflow: hidden;
+    
+    background-color: var(--main-bg-color);
+    transition: width .4s ease-out;
+    box-shadow: -10vw 0 20vw black;
+}
+
+.navmenu-items {
+    display: grid;
+    gap: 20px;
+    align-content: start;
+    grid-template-columns: auto;
+    
+    margin: 40px;
+}
+
+.close-navmenu-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    
+    font-size: 32px;
+    text-align: center;
+    width: 44px;
+    cursor: pointer;
+}
+
+@media (pointer: fine) {
+    .hamburger, .close-navmenu-button {
+        transition: color .1s;
+    }
+    .hamburger:hover, .close-navmenu-button:hover {
+        color: #bebec8;
+    }
+}
+
+.navmenu .nav-item {
+    justify-self: start;
+}
+
+.close-navmenu-region {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: none;
+    cursor: pointer;
+}
+
+/* Change nav type for mobile/desktop */
+/* Mobile OR small desktop */
+@media (pointer: coarse), (max-width: 900px) {
+    .navbar-right {
+        display: none;
+    }
+}
+
+/* Desktop */
+@media (pointer: fine) and (min-width: 900px) {
+    .hamburger {
+        display: none;
+    }
+    
+    .navmenu {
+        display: none;
+    }
+}
