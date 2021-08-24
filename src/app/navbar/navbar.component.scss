@@ -28,6 +28,7 @@
 .line-container::after {
     content: "";
 	display: block;
+    width: 64px;
     border-radius: 1px;
 	border-bottom: 3px solid var(--main-accent);
     
@@ -64,7 +65,7 @@
         display: block;
         width: 0px;
         border-bottom: 2px solid var(--main-accent);
-        transition: all .5s;
+        transition: width .5s;
         border-radius: 1px;
     }
 
