@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
                 pairwise(),
                 map(
                     ([y1, y2]): Direction =>
-                        y2 < y1 ? Direction.Up : Direction.Down
+                        y2 < y1 || y2 < 80 ? Direction.Up : Direction.Down
                 )
             );
 

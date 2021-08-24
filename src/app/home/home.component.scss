@@ -18,12 +18,12 @@ p {
 .profile .profile-title {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 12vh;
-    /* font-size: 60px; */
     text-align: left;
     
     width: 80%;
     
     padding-left: 10vw;
+    padding-top: 30px;
     font-weight: bold;
     
     position: relative;
@@ -61,6 +61,11 @@ p {
     
     z-index: -1;
     border-bottom-left-radius: 100px;
+}
+
+.tagline {
+    font-size: 28px;
+    text-align: center;
 }
 
 @media only screen and (min-width: 600px) {
