@@ -16,6 +16,7 @@
     background-color: var(--main-bg-color);
     border: rgb(180, 180, 180) solid 2px;
     text-align: center;
+    color: white;
 }
 
 @media only screen and (pointer: fine) {
@@ -54,4 +55,23 @@
     justify-content: space-evenly;
     margin: 24px auto;
     max-width: 800px;
+}
+
+@media only screen and (pointer: fine) {
+    .extra-links a {
+        transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .extra-links a:hover {
+        transform: translateY(-2px);
+    }
+
+    .extra-links img {
+        border-radius: 50%;
+        transition: box-shadow 0.2s;
+    }
+
+    .extra-links a:hover img {
+        box-shadow: 0 5px 10px black;
+    }
 }
