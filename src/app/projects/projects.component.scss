@@ -1,0 +1,104 @@
+
+.project-grid {
+    display: grid;
+    grid-template-columns: auto;
+    
+    gap: 24px;
+    margin: 24px;
+}
+
+.project-grid .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+    overflow: hidden;
+}
+
+.project-grid .cell > div {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    
+    border-radius: inherit;
+    background-color: #242226b2;
+    color: black;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .4);
+}
+
+.project-grid .cell > div > div {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-align: center;
+    
+    padding: 12px;
+    transition: .2s;
+}
+
+@media only screen and (pointer: fine) {
+    .project-grid .cell:hover > div > div{
+        padding-bottom: 20px;
+    }
+}
+
+.project-grid .cell .title {
+    font-weight: bold;
+    font-size: 24px;
+    
+    padding-bottom: 4px;
+}
+
+.project-grid .cell .caption {
+    font-size: 14px;
+}
+
+.project-grid .animal-aid {
+    background-image: url("../../assets/AnimalAid/home.png");
+}
+.project-grid .ugla {
+    background-image: url("../../assets/UGLA/UGLA_snip.png");
+}
+.project-grid .swarm {
+    background-image: url("../../assets/Swarm/TOREPLACE.webp");
+}
+.project-grid .acton {
+    background-image: url("../../assets/Acton/logo.jpg");
+}
+.project-grid .printing-classes {
+    background-image: url("../../assets/3DClasses/Flier.png");
+}
+.project-grid .default {
+    background-image: url("../../assets/nature.jpg");
+}
+
+@media only screen and (min-width: 500px) {
+    .project-grid {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .project-grid {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .project-grid {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    .project-grid {
+        grid-template-columns: auto auto auto auto auto;
+    }
+}
