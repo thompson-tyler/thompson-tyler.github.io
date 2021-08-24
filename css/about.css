@@ -1,0 +1,42 @@
+.about-subtitle {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    color: #ffffff;
+    margin: 40px 0;
+}
+
+.rec-container {
+    border-radius: 8px;
+    border: white solid 1px;
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 16px;
+    height: min-content;
+    margin: 40px 0;
+}
+
+.rec-container .right {
+    text-align: right;
+    font-style: italic;
+}
+
+.side-by-side {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 24px;
+}
+
+@media only screen and (min-width: 900px) {
+    .side-by-side {
+        grid-template-columns: auto auto;
+    }
+}
+
+img {
+    border-radius: 16px;
+    max-height: 60vh;
+    margin: auto;
+}
