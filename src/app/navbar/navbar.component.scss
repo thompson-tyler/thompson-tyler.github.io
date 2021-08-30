@@ -155,7 +155,7 @@ only screen and (pointer: fine) and (max-width: 900px) and (min-width: 575px) {
 }
 
 .close-navmenu-region {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -190,5 +190,5 @@ only screen and (pointer: fine) and (max-width: 900px) and (min-width: 575px) {
 }
 
 .visible {
-    display: unset;
+    display: block;
 }
