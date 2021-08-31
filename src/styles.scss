@@ -24,6 +24,10 @@ a {
     text-decoration: inherit;
 }
 
+p a {
+    text-decoration: underline;
+}
+
 @media only screen and (pointer: fine) {
     a {
         transition: color .2s;
