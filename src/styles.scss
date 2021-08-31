@@ -105,17 +105,10 @@ a {
     transition: all .2s;
 }
 
-/* Tablet */
-@media only screen and (min-width: 600px) {
+/* Tablet/Desktop */
+@media only screen and (min-width: 800px) {
     .snip-container {
-        grid-template-columns: auto auto;
-    }
-}
-
-/* Desktop */
-@media only screen and (min-width: 900px) {
-    .snip-container {
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
