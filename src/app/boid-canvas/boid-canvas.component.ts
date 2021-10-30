@@ -9,8 +9,11 @@ import { NODES, NODE_SCALE_X, NODE_SCALE_Y } from './title-nodes';
     styleUrls: ['./boid-canvas.component.scss'],
 })
 export class BoidCanvasComponent implements OnInit {
+
     @ViewChild('canvas', { static: true })
     private canvas: ElementRef<HTMLCanvasElement>;
+    @ViewChild('title', { static: true })
+    private title: ElementRef<HTMLDivElement>;
     private ctx: CanvasRenderingContext2D;
 
     frameNum: number = 0;
@@ -18,6 +21,7 @@ export class BoidCanvasComponent implements OnInit {
 
     width: number;
     height: number;
+    isMobile: boolean;
 
     COH: number = 0.02;
     SEP: number = 24;
@@ -39,12 +43,22 @@ export class BoidCanvasComponent implements OnInit {
 
         // get canvas context
         this.ctx = this.canvas.nativeElement.getContext('2d')!;
-        this.ctx.fillStyle = '#e7b351';
 
         // store dimensions of canvas
         this.width = this.canvas.nativeElement.width;
         this.height = this.canvas.nativeElement.height;
 
+        // place boids
+        this.placeBoids();
+
+        // place nodes
+        this.placeNodes();
+
+        // begins animation loop
+        this.animate();
+    }
+
+    placeBoids(): void {
         // settings up array of boids
         this.boids = [];
         for (let i = 0; i < this.NUMBOIDS; i++) {
@@ -55,6 +69,11 @@ export class BoidCanvasComponent implements OnInit {
                 )
             );
         }
+    }
+
+    placeNodes(): void {
+        // clear nodes
+        this.scaledNodes = [];
 
         // setting up array of letter nodes
         this.scaledNodes = [];
@@ -64,30 +83,51 @@ export class BoidCanvasComponent implements OnInit {
                 y: (node.y / NODE_SCALE_Y) * this.height,
             });
         }
-
-        // begins animation loop
-        this.animate();
     }
 
     animate(): void {
-        // clear canvas
-        this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
+        // update nodes if desktop is resized
+        if (!this.isMobile && this.width != window.visualViewport.width) {
+            this.placeNodes();
+            this.canvas.nativeElement.width = window.visualViewport.width;
+            this.width = window.visualViewport.width;
+        }
 
-        this.updateBoids();
-        this.renderBoids();
+        // set isMobile
+        this.isMobile = window.innerWidth < 900;
 
-        this.frameNum++;
+        // render if not on mobile
+        if (!this.isMobile) {
+            // show canvas
+            this.canvas.nativeElement.style.display = 'block';
+            this.title.nativeElement.style.display = 'none';
+
+            // clear canvas
+            this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
+
+            this.updateBoids();
+            this.renderBoids();
+
+            this.frameNum++;
+        } // otherwise hide canvas
+        else {
+            this.canvas.nativeElement.style.display = 'none';
+            this.title.nativeElement.style.display = 'block';
+        }
         requestAnimationFrame(this.animate.bind(this));
     }
 
     updateBoids(): void {
         for (let boid of this.boids) {
-            // only updates velocities every /updateInterval/ frames
+            // only updates velocities every /updateInterval/ frames and if scrolled to top of page
             if (this.frameNum % this.updateInterval == 0) {
                 // this.cohesion(boid);
                 // this.alignment(boid);
                 this.separation(boid);
-                this.flockToNodes(boid);
+
+                // flock to nodes if scrolled to top of page
+                if (window.scrollY <= 0)
+                    this.flockToNodes(boid);
 
                 this.avoidEdge(boid);
 
@@ -103,6 +143,14 @@ export class BoidCanvasComponent implements OnInit {
 
     // render all boids to the canvas
     renderBoids(): void {
+
+        // dim color if not scrolled to top of page
+        if (window.scrollY <= 0)
+            this.ctx.fillStyle = '#e7b351';
+        else
+            // 
+            this.ctx.fillStyle = '#91753f';
+
         for (let boid of this.boids) {
             this.ctx.beginPath();
             this.ctx.arc(boid.x, boid.y, 8, 0, 2 * Math.PI);
