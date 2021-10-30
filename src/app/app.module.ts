@@ -10,6 +10,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { AnimalAidProjectComponent } from './animal-aid-project/animal-aid-project.component';
 import { UGLAProjectComponent } from './ugla-project/ugla-project.component';
 import { ContactComponent } from './contact/contact.component';
+import { BoidCanvasComponent } from './boid-canvas/boid-canvas.component';
+import { SwarmProjectComponent } from './swarm-project/swarm-project.component';
+import { UnderConstructionBannerComponent } from './under-construction-banner/under-construction-banner.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { ContactComponent } from './contact/contact.component';
     AnimalAidProjectComponent,
     UGLAProjectComponent,
     ContactComponent,
+    BoidCanvasComponent,
+    SwarmProjectComponent,
+    UnderConstructionBannerComponent,
   ],
   imports: [
     BrowserModule,
