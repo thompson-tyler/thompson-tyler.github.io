@@ -1,21 +1,22 @@
 .banner-container {
-    display: flex;
     background-color: #f7c56a;
     color: var(--main-bg-color);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 5.9vw;
-    font-weight: bold;
-    font-style: italic;
-    max-width: 100%;
+    width: 100%;
     height: 4.2vw;
-    line-height: 65%;
     white-space: nowrap;
+    overflow-x: hidden;
     margin: 200px 0;
+    position: relative;
 }
 
 .scrolling-title {
-    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5.9vw;
+    line-height: 65%;
+    font-weight: bold;
+    font-style: italic;
     background-color: transparent;
+    position: absolute;
 }
 
 .num-1 {

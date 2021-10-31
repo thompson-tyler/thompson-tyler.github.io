@@ -71,6 +71,12 @@ export class BoidCanvasComponent implements OnInit {
         }
     }
 
+    scaleBoidPos(scale: number) {
+        for (let boid of this.boids) {
+            boid.x *= scale;
+        }
+    }
+
     placeNodes(): void {
         // clear nodes
         this.scaledNodes = [];
@@ -89,6 +95,7 @@ export class BoidCanvasComponent implements OnInit {
         // update nodes if desktop is resized
         if (!this.isMobile && this.width != window.visualViewport.width) {
             this.placeNodes();
+            this.scaleBoidPos(window.visualViewport.width / this.width);
             this.canvas.nativeElement.width = window.visualViewport.width;
             this.width = window.visualViewport.width;
         }
