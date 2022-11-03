@@ -1,0 +1,92 @@
+@import "../scss-vars.scss";
+
+.container {
+    width: 100%;
+    padding: 12px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: $text-color;
+    font-family: $title-font;
+    background-color: $background-color;
+
+    .navLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        a {
+            margin: 0 16px;
+            font-size: 1.4rem;
+            color: $text-color;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.1s;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 2px;
+                background: $accent-color;
+                transition: width 0.3s;
+            }
+            &:hover::after {
+                width: 100%;
+            }
+            &:active {
+                transform: translateY(2px);
+            }
+        }
+    }
+    
+    .logo {
+        font-size: 60px;
+        cursor: pointer;
+        transition: all 0.1s;
+        font-family: $body-font;
+
+        .logoText {
+            display: flex;
+            flex-direction: row;
+            gap: 2px;
+    
+            .shrink {
+                max-width: 0px;
+                overflow-x: hidden;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            margin-left: 2px;
+            width: 74px;
+            border-bottom: 3px solid $accent-color;
+            border-radius: 1px;
+            transition: all .5s ease-in-out;
+        }
+        
+        &:hover {
+            .shrink {
+                max-width: 100%;
+            }
+            &::after {
+                width: 506px;
+            }
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+}
