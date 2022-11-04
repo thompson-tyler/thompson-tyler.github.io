@@ -13,28 +13,24 @@ export default function SideBySide(props: SideBySideProps) {
   const Container = styled.div`
     display: flex;
     flex-direction: row;
-    gap: 10rem;
+    gap: 1rem;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 1rem;
-
-    img {
-      border-radius: 30px;
-    }
+    padding: 1rem;
   `;
 
-  const Left = styled.div`
-    width: ${leftWidth ? leftWidth : 50}%;
-  `;
-  const Right = styled.div`
-    width: ${rightWidth ? rightWidth : 50}%;
+  const Side = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
   `;
 
   return (
     <Container>
-      <Left>{left}</Left>
-      <Right>{right}</Right>
+      <Side>{left}</Side>
+      <Side>{right}</Side>
     </Container>
   );
 }

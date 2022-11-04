@@ -3,7 +3,7 @@ import SwarmImg from "../static/projects/swarms/swarm.webp";
 import UGLASnip from "../static/projects/ugla/ugla-snip.png";
 import AnimalAidHome from "../static/projects/animal-aid/home.png";
 import TupitImage from "../static/projects/tupit/public-site.jpg";
-import WicImage from "../static/projects/wic/logo.png";
+import WicImage from "../static/projects/wic/logo.jpeg";
 import ActonLogo from "../static/volunteering/acton-logo.jpg";
 import ClassLogo from "../static/volunteering/3d-class-flier.png";
 

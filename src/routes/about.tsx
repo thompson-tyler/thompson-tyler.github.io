@@ -3,10 +3,23 @@ import PCTWithNicole from "../static/pct-with-nicole.png";
 import Skiing from "../static/skiing.png";
 import Dancing from "../static/dancing.jpg";
 import styled from "styled-components";
+import { colors, fonts } from "../css-vars";
 
 const Image = styled.img`
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+`;
+
+const ImageText = styled.div`
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: ${fonts.titleFont};
+  color: ${colors.textColor};
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
 `;
 
 export default function About() {
@@ -37,18 +50,26 @@ export default function About() {
       <SideBySide
         left={<Image src={PCTWithNicole} />}
         right={
-          <h3>My mom and I love to go backpacking! Here's us on the PCT</h3>
+          <ImageText>
+            My mom and I love to go backpacking! Here's us on the PCT
+          </ImageText>
         }
       />
       <SideBySide
         left={
-          <h3>Tyler also likes to ski! Look at those silly little mini skis</h3>
+          <ImageText>
+            Tyler also likes to ski! Look at those silly little mini skis
+          </ImageText>
         }
         right={<Image src={Skiing} />}
       />
       <SideBySide
         left={<Image src={Dancing} />}
-        right={<h3>Tyler dances ballroom with the Tufts Ballroom Team!</h3>}
+        right={
+          <ImageText>
+            Tyler dances ballroom with the Tufts Ballroom Team!
+          </ImageText>
+        }
       />
     </section>
   );

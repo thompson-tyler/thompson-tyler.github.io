@@ -68,7 +68,14 @@ export const TupitProject = (
       site to best meet their needs.
     </p>
     <h2>Visit</h2>
-    <IconLink icon={LogoImage} link="http://sites.tufts.edu/tupit/" />
+    <IconGallery
+      icons={[LogoImage, GithubIcon]}
+      links={[
+        "https://sites.tufts.edu/tupit/",
+        "https://github.com/JumboCode/TUPIT",
+      ]}
+    />
+    {/* <IconLink icon={LogoImage} link="http://sites.tufts.edu/tupit/" /> */}
     <h2>Technologies</h2>
     <IconGallery
       icons={[

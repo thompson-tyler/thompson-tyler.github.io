@@ -1,5 +1,5 @@
 import IconLink from "../../components/icon-link";
-import LogoImage from "../../static/projects/wic/logo.png";
+import LogoImage from "../../static/projects/wic/logo.jpeg";
 import FigmaIcon from "../../static/icons/figma.png";
 import ReactIcon from "../../static/icons/react.png";
 import TypescriptIcon from "../../static/icons/typescript.png";

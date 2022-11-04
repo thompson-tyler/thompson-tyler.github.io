@@ -28,9 +28,9 @@ export default function IconGallery(props: IconGalleryProps) {
     <Container>
       {links
         ? icons.map((icon, index) => (
-            <Link to={links[index]}>
+            <a href={links[index]} target="_blank">
               <Entry src={icon} />
-            </Link>
+            </a>
           ))
         : icons.map((icon, index) => <Entry src={icon} />)}
     </Container>

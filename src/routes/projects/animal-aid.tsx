@@ -1,5 +1,4 @@
 import Gallery from "../../components/gallery";
-import IconLink from "../../components/icon-link";
 import HomeImage from "../../static/projects/animal-aid/home.png";
 import NewDogImage from "../../static/projects/animal-aid/new-dog.png";
 import ScheduleImage from "../../static/projects/animal-aid/schedule.png";
@@ -14,6 +13,7 @@ import DjangoImage from "../../static/icons/django.png";
 import PostgresImage from "../../static/icons/postgresql.png";
 import AWSImage from "../../static/icons/aws.jpg";
 import HerokuImage from "../../static/icons/heroku.png";
+import GithubLogo from "../../static/icons/github.png";
 
 export const AnimalAidProject = (
   <section>
@@ -74,9 +74,12 @@ export const AnimalAidProject = (
       user authentication system and SendGrid.
     </p>
     <h2>Visit</h2>
-    <IconLink
-      icon={AnimalAidLogo}
-      link="https://animalaidtufts.herokuapp.com/"
+    <IconGallery
+      icons={[AnimalAidLogo, GithubLogo]}
+      links={[
+        "https://animalaidtufts.herokuapp.com/",
+        "https://github.com/JumboCode/Animal-Aid",
+      ]}
     />
     <h2>Technologies</h2>
     <IconGallery
