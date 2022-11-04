@@ -13,6 +13,8 @@ import IconGallery from "../../components/icon-gallery";
 export const UglaProject = (
   <section>
     <h1>UGLA</h1>
+    <h2>Gallery</h2>
+    <Gallery images={[UglaSnip, UglaAnim1, UglaAnim2, UglaAnim3, UglaAnim4]} />
     <p>
       I play video games from time to time and I'm obsessed with world
       interactivity as a major game mechanic. Drawing inspiration from the
@@ -37,11 +39,6 @@ export const UglaProject = (
       and the importance of building things you really enjoy. Check out the
       latest binary here.
     </p>
-    <h2>Gallery</h2>
-    <Gallery
-      images={[UglaSnip, UglaAnim1, UglaAnim2, UglaAnim3, UglaAnim4]}
-      perRow={2}
-    />
     <h2>Github</h2>
     <IconLink
       icon={GitHubIcon}

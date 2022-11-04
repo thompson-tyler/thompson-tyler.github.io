@@ -15,7 +15,7 @@ const Container = styled.div<{ perRow?: number }>`
   grid-template-columns: ${(p) =>
     p.perRow
       ? `repeat(${(p: { perRow: number }) => p.perRow}, 1fr)`
-      : "repeat(auto-fill, 250px)"};
+      : "repeat(auto-fill, minmax(200px, 1fr))"};
   gap: 20px;
   width: 100%;
 `;
@@ -32,8 +32,10 @@ const Entry = styled.div<{ image: string }>`
   overflow: hidden;
   transition: 0.2s ease-in-out;
 
-  &:hover h3 {
-    padding-bottom: 15px;
+  @media (pointer: fine) {
+    &:hover h3 {
+      padding-bottom: 15px;
+    }
   }
   &:active {
     transform: scale(0.95);
@@ -48,7 +50,7 @@ const EntryTitle = styled.h3`
   border-radius: 10px 10px 0 0;
   margin: 0;
   padding: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 50%;
   text-align: center;
   transition 0.2s ease-out;
 `;

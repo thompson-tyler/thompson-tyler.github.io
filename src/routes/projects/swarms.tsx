@@ -8,6 +8,6 @@ export const SwarmProject = (
       definitely took a more DIY approach with it, consulting the internet as
       little as possible.
     </p>
-    <p>I'll post screenshops and push the code to Github soon.</p>
+    <p>I'll post screenshots and push the code to Github soon.</p>
   </section>
 );

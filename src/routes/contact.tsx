@@ -6,6 +6,8 @@ const ButtonContainer = styled.div`
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
 `;
 
 const ContactButton = styled.a`

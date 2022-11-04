@@ -16,6 +16,8 @@ import GithubIcon from "../../static/icons/github.png";
 export const TupitProject = (
   <section>
     <h1>TUPIT</h1>
+    <h2>Gallery</h2>
+    <Gallery images={[ClassSearch, EditClass, StudentSearch, EditStudent]} />
     <p>
       The Tufts University Prison Initiative of the Tisch College of Civic Life
       (TUPIT) is a program which allows incarcerated and formerly incarcerated
@@ -41,11 +43,6 @@ export const TupitProject = (
       developed is now being used to track student progress for TUPIT's various
       programs.
     </p>
-    <h2>Gallery</h2>
-    <Gallery
-      images={[ClassSearch, EditClass, StudentSearch, EditStudent]}
-      perRow={2}
-    />
     <h2>My Impact</h2>
     <p>
       I was the tech lead for this project. I worked closely with the project

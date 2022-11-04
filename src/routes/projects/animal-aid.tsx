@@ -18,6 +18,16 @@ import HerokuImage from "../../static/icons/heroku.png";
 export const AnimalAidProject = (
   <section>
     <h1>Animal Aid</h1>
+    <h2>Gallery</h2>
+    <Gallery
+      images={[
+        HomeImage,
+        NewDogImage,
+        ScheduleImage,
+        SignupImage,
+        WalkerSignup,
+      ]}
+    />
     <p>
       Animal Aid is a student organization which connects students walkers to
       local dogs who need to be walked. However, the process of matching
@@ -30,17 +40,6 @@ export const AnimalAidProject = (
       effortless to run our matching algorithm, populating student profiles with
       individualized walking schedules.
     </p>
-    <h2>Gallery</h2>
-    <Gallery
-      images={[
-        HomeImage,
-        NewDogImage,
-        ScheduleImage,
-        SignupImage,
-        WalkerSignup,
-      ]}
-      perRow={2}
-    />
     <h2>My Impact</h2>
     <p>
       I implemented features both on the frontend and backend. A challenge my

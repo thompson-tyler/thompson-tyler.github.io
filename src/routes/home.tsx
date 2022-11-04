@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import TylerCandid from "../static/tyler-candid.jpg";
-import "./home.scss";
+import { colors, fonts } from "../css-vars";
 
 const MainImage = styled.div`
   width: 65vw;
@@ -32,6 +32,31 @@ const Greeting = styled.div`
   margin-bottom: 80px;
 `;
 
+const BigButton = styled.div`
+  @import "../scss-vars.scss";
+  width: 100%;
+  background-color: ${colors.accentColor};
+  border-radius: 10px;
+  text-align: center;
+  font-size: 3rem;
+  font-family: ${fonts.titleFont};
+  font-weight: bold;
+  text-transform: uppercase;
+  color: ${colors.textColor};
+  cursor: pointer;
+  padding: 15px;
+  transition: all 0.1s;
+
+  @media (pointer: fine) {
+    &:hover {
+      background-color: ${colors.accentColorLight};
+    }
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+`;
+
 export default function Home() {
   return (
     <section>
@@ -51,8 +76,8 @@ export default function Home() {
         Assembly, C, Python, HTML/CSS, or anything in between, I've probably
         built something with it. I look forward to connecting with you!
       </p>
-      <Link to="/projects" className="bigButton">
-        My Projects
+      <Link to="/projects">
+        <BigButton>My Projects</BigButton>
       </Link>
     </section>
   );

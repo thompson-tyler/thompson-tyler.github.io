@@ -30,6 +30,7 @@
     font-size: 6rem;
     text-transform: uppercase;
     color: $text-color;
+    text-align: center;
     &::after {
       content: "";
       display: block;
@@ -38,11 +39,15 @@
       background: $accent-color;
       transition: width 0.3s;
     }
+
+    @media (max-width: 768px) {
+      font-size: 9vw;
+    }
   }
 
   h2 {
     font-family: $title-font;
-    font-size: 2.5vw;
+    font-size: 4rem;
     text-transform: uppercase;
     text-align: center;
     color: $text-color;
@@ -53,6 +58,9 @@
       height: 2px;
       background: $secondary-accent-color;
       transition: width 0.3s;
+    }
+    @media (max-width: 800px) {
+      font-size: 8vw;
     }
   }
 
