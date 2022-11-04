@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.06917736.css",
-    "main.js": "/static/js/main.49d270f1.js",
+    "main.css": "/static/css/main.6cf2cbfb.css",
+    "main.js": "/static/js/main.17b8df42.js",
     "static/media/ugla-anim-4.gif": "/static/media/ugla-anim-4.d8f0717494fd1cbb0580.gif",
     "static/media/ugla-anim-2.gif": "/static/media/ugla-anim-2.08f36aab61f32bb41c2f.gif",
     "static/media/ugla-anim-1.gif": "/static/media/ugla-anim-1.696073c747d0223ef830.gif",
@@ -37,11 +37,11 @@
     "static/media/typescript.png": "/static/media/typescript.af108db04a54d784da9b.png",
     "static/media/github.png": "/static/media/github.f73367efa766849b0775.png",
     "index.html": "/index.html",
-    "main.06917736.css.map": "/static/css/main.06917736.css.map",
-    "main.49d270f1.js.map": "/static/js/main.49d270f1.js.map"
+    "main.6cf2cbfb.css.map": "/static/css/main.6cf2cbfb.css.map",
+    "main.17b8df42.js.map": "/static/js/main.17b8df42.js.map"
   },
   "entrypoints": [
-    "static/css/main.06917736.css",
-    "static/js/main.49d270f1.js"
+    "static/css/main.6cf2cbfb.css",
+    "static/js/main.17b8df42.js"
   ]
 }
