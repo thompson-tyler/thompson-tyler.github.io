@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6cf2cbfb.css",
-    "main.js": "/static/js/main.75ce36f8.js",
+    "main.js": "/static/js/main.be4b10cd.js",
     "static/media/ugla-anim-4.gif": "/static/media/ugla-anim-4.d8f0717494fd1cbb0580.gif",
     "static/media/ugla-anim-2.gif": "/static/media/ugla-anim-2.08f36aab61f32bb41c2f.gif",
     "static/media/ugla-anim-1.gif": "/static/media/ugla-anim-1.696073c747d0223ef830.gif",
@@ -17,12 +17,16 @@
     "static/media/edit-class.jpg": "/static/media/edit-class.3b747764761c3a08eee1.jpg",
     "static/media/class-search.jpg": "/static/media/class-search.f8cc1568644aed320ef7.jpg",
     "static/media/signup.png": "/static/media/signup.f45860b199437bd3b690.png",
+    "static/media/assemblyai.png": "/static/media/assemblyai.f0b245e66aa6a7b408a4.png",
     "static/media/tyler-candid.jpg": "/static/media/tyler-candid.38e0c0986f85c68ff900.jpg",
     "static/media/logo.png": "/static/media/logo.84cb3f581ef3976c95be.png",
     "static/media/home.png": "/static/media/home.7b12920dfa4a29cf67cd.png",
     "static/media/schedule.png": "/static/media/schedule.c41a9d6e6401b610d790.png",
     "static/media/walker-signup.png": "/static/media/walker-signup.02b3b209f3495b71db0e.png",
+    "static/media/openai.png": "/static/media/openai.a18f2d7fe1237aea1aa8.png",
+    "static/media/raspi.png": "/static/media/raspi.bd332561b83bcd50a0f7.png",
     "static/media/python.png": "/static/media/python.d51ffed469de811b813f.png",
+    "static/media/gcloud.png": "/static/media/gcloud.1479474eac2c00982c91.png",
     "static/media/sfml.png": "/static/media/sfml.e1314f6604549b15b76d.png",
     "static/media/aws.jpg": "/static/media/aws.2d8f24b9174608bb6384.jpg",
     "static/media/react.png": "/static/media/react.283bf42c605cfc49cf49.png",
@@ -31,17 +35,19 @@
     "static/media/express.png": "/static/media/express.0526f2befbd3c0c3b82d.png",
     "static/media/new-dog.png": "/static/media/new-dog.6fed308470c3920a6ff8.png",
     "static/media/postgresql.png": "/static/media/postgresql.d3cf0c308c0ceb0f72db.png",
+    "static/media/hackharvard.png": "/static/media/hackharvard.8666bd6d144f99d0c29b.png",
     "static/media/ugla-snip.png": "/static/media/ugla-snip.8ba6a8c23c589a01a22e.png",
     "static/media/django.png": "/static/media/django.1561b91d7b75f3ca2814.png",
     "static/media/figma.png": "/static/media/figma.72fbc535ebe253a5dbc4.png",
     "static/media/typescript.png": "/static/media/typescript.af108db04a54d784da9b.png",
     "static/media/github.png": "/static/media/github.f73367efa766849b0775.png",
+    "static/media/devpost.svg": "/static/media/devpost.6c145a6c58f1a8238ffc23e12a876213.svg",
     "index.html": "/index.html",
     "main.6cf2cbfb.css.map": "/static/css/main.6cf2cbfb.css.map",
-    "main.75ce36f8.js.map": "/static/js/main.75ce36f8.js.map"
+    "main.be4b10cd.js.map": "/static/js/main.be4b10cd.js.map"
   },
   "entrypoints": [
     "static/css/main.6cf2cbfb.css",
-    "static/js/main.75ce36f8.js"
+    "static/js/main.be4b10cd.js"
   ]
 }
