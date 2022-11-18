@@ -1,5 +1,4 @@
 import Gallery from "../../components/gallery";
-import IconLink from "../../components/icon-link";
 import IconGallery from "../../components/icon-gallery";
 import LogoImage from "../../static/projects/tupit/logo.png";
 import ClassSearch from "../../static/projects/tupit/class-search.jpg";

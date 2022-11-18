@@ -3,12 +3,10 @@ import styled from "styled-components";
 export interface SideBySideProps {
   left: React.ReactNode;
   right: React.ReactNode;
-  leftWidth?: number;
-  rightWidth?: number;
 }
 
 export default function SideBySide(props: SideBySideProps) {
-  const { left, right, leftWidth, rightWidth } = props;
+  const { left, right } = props;
 
   const Container = styled.div`
     display: flex;

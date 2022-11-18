@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export interface IconGalleryProps {
@@ -28,7 +27,7 @@ export default function IconGallery(props: IconGalleryProps) {
     <Container>
       {links
         ? icons.map((icon, index) => (
-            <a href={links[index]} target="_blank">
+            <a href={links[index]} target="_blank" rel="noreferrer">
               <Entry src={icon} />
             </a>
           ))
