@@ -12,6 +12,7 @@ import { AnimalAidProject } from "./routes/projects/animal-aid";
 import { TupitProject } from "./routes/projects/tupit";
 import { WicProject } from "./routes/projects/wic";
 import { SwarmProject } from "./routes/projects/swarms";
+import { TheraboxProject } from "./routes/projects/therabox";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -30,6 +31,7 @@ root.render(
             <Route path="tupit" element={TupitProject} />
             <Route path="wic" element={WicProject} />
             <Route path="swarms" element={SwarmProject} />
+            <Route path="therabox" element={TheraboxProject} />
             <Route path="*" element={<Projects />} />
           </Route>
           <Route path="contact" element={<Contact />} />

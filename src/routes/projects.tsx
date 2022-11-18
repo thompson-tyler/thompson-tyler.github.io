@@ -6,6 +6,7 @@ import TupitImage from "../static/projects/tupit/public-site.jpg";
 import WicImage from "../static/projects/wic/logo.jpeg";
 import ActonLogo from "../static/volunteering/acton-logo.jpg";
 import ClassLogo from "../static/volunteering/3d-class-flier.png";
+import HackHarvardLogo from "../static/icons/hackharvard.png";
 
 export default function Projects() {
   return (
@@ -23,13 +24,14 @@ export default function Projects() {
       />
       <h2>Projects</h2>
       <ProjectGallery
-        images={[UGLASnip, SwarmImg]}
-        titles={["UGLA", "Swarms"]}
+        images={[HackHarvardLogo, UGLASnip, SwarmImg]}
+        titles={["Therabox", "UGLA", "Swarms"]}
         captions={[
+          "A conversational AI that helps people ease into therapy",
           "Avatar-inspired proof of concept game written in C++",
           "Simulated swarms in C++",
         ]}
-        links={["ugla", "swarms"]}
+        links={["therabox", "ugla", "swarms"]}
       />
       <h2>Volunteering</h2>
       <ProjectGallery
